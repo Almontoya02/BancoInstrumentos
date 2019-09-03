@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <title>JS Bin</title>
+</head>
+<body>
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Banco de instrumentos</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">inicio</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestionar<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Notificaciones</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarme</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
+                  </ul>
+                </div>
+              </nav>
+                
+              
+  <h1>Crear instrumento</h1>
+  <form @submit="mostrarContenido">
+      
+    <label for="idInstrumento">idInstrumento:</label>
+    <input type="text" id="idInstrumento" v-model="idInstrumento"><br/><br/>
+    <label for="nombre">nombre:</label>
+    <input type="text" id="nombre" v-model="nombre"><br/><br/>
+    <label for="descripcion">Descripción:</label>
+    <input type="text" id="descripcion" v-model="descripcion"><br/><br/>
+    <label for="conceptosAsociados">Conceptos asociados:</label>
+    <input type="text" id="conceptosAsociados" v-model="conceptosAsociados"><br/><br/>
+    <label for="numeroGrupos">Numero Grupos:</label>
+    <input type="text" id="numeroGrupos" v-model="numeroGrupos"><br/><br/>
+    <label for="participantesGrupo">Cantidad participantes por Grupo:</label>
+    <input type="text" id="participantesGrupo" v-model="participantesGrupo"><br/><br/>
+    <label for="proposito">Proposito:</label>
+    <input type="text" id="proposito" v-model="proposito"><br/><br/>
+    <label for="tiempoDuracion">Tiempo de duración:</label>
+    <input type="text" id="tiempoDuracion" v-model="tiempoDuracion"><br/><br/>
+    <label for="criterioGanador">Criterio ganador:</label>
+    <input type="text" id="criterioGanador" v-model="criterioGanador"><br/><br/>
+    <label for="material">Material:</label>
+    <input type="text" id="material" v-model="material"><br/><br/>
+    <label for="reglas">Reglas:</label>
+    <input type="text" id="reglas" v-model="reglas"><br/><br/>
+    <label for="fechaCreacion">Fecha Creación:</label>
+    <input type="text" id="fechaCreacion" v-model="fechaCreacion"><br/><br/>
+    <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+      </select>
+    <input type="submit" value="Enviar" />
+
+  </form>
+</body>
